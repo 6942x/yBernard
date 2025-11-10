@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Zenoir - Professional Animator Portfolio">
-    <title>Zenoir - Animator Portfolio</title>
+    <meta name="description" content="yBernard - Professional Animator Portfolio">
+    <title>yBernard - Animator Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
     <style>
@@ -743,7 +743,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.98);
             z-index: 2000;
             opacity: 0;
             animation: fadeIn 0.3s ease-out forwards;
@@ -778,19 +778,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            height: 100%;
+            width: 95%;
+            height: 95%;
             cursor: default;
-            overflow: auto;
-            padding: 20px;
+            overflow: hidden;
             touch-action: none;
         }
 
         .modal-video {
-            max-width: 95%;
-            max-height: 95%;
-            border-radius: 10px;
-            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
             z-index: 1;
             box-shadow: 0 0 80px rgba(0, 255, 136, 0.7);
             border: 3px solid #00FF88;
@@ -834,10 +833,10 @@
 
         .close-button {
             position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 45px;
-            height: 45px;
+            top: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
             background: linear-gradient(135deg, #00FF88, #00CC66);
             border: none;
             border-radius: 50%;
@@ -845,7 +844,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #fff;
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             z-index: 2002;
@@ -981,15 +980,16 @@
             }
             
             .modal-video-container {
-                padding: 40px;
+                width: 90%;
+                height: 90%;
             }
             
             .close-button {
                 top: 40px;
                 right: 40px;
-                width: 50px;
-                height: 50px;
-                font-size: 1.8rem;
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
             }
         }
 
@@ -1045,6 +1045,11 @@
             
             .projects-container {
                 grid-template-columns: 1fr;
+            }
+            
+            .modal-video-container {
+                width: 98%;
+                height: 60%;
             }
         }
 
@@ -1126,15 +1131,16 @@
             }
             
             .modal-video-container {
-                padding: 10px;
+                width: 98%;
+                height: 50%;
             }
             
             .close-button {
-                top: 15px;
-                right: 15px;
-                width: 40px;
-                height: 40px;
-                font-size: 1.3rem;
+                top: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -1144,7 +1150,7 @@
 
     <header>
         <nav>
-            <div class="logo">Zenoir</div>
+            <div class="logo">yBernard</div>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -1163,10 +1169,10 @@
     <section class="home" id="home">
         <div class="home-img"></div>
         <div class="profile-image" onclick="openModal()">
-            <img src="https://drive.google.com/thumbnail?id=1C4Ob5flV-GwZoBSWrB7xdNWL_gz0Hg4Q&sz=w1000" alt="Zenoir">
+            <img src="https://drive.google.com/thumbnail?id=1C4Ob5flV-GwZoBSWrB7xdNWL_gz0Hg4Q&sz=w1000" alt="yBernard">
         </div>
         <div class="home-content">
-            <h1>Hi, I'm <span>Zenoir</span></h1>
+            <h1>Hi, I'm <span>yBernard</span></h1>
             <div class="status-badge">🟢 Open For Work</div>
             <div class="home-buttons">
                 <a href="#about" class="nav-button">About</a>
@@ -1188,7 +1194,7 @@
             </div>
             <div class="about-image">
                 <div class="about-avatar" onclick="openModal()">
-                    <img src="https://drive.google.com/thumbnail?id=1C4Ob5flV-GwZoBSWrB7xdNWL_gz0Hg4Q&sz=w1000" alt="Zenoir">
+                    <img src="https://drive.google.com/thumbnail?id=1C4Ob5flV-GwZoBSWrB7xdNWL_gz0Hg4Q&sz=w1000" alt="yBernard">
                 </div>
             </div>
         </div>
@@ -1317,7 +1323,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Zenoir - Professional Animator | Game Animation Specialist</p>
+        <p>&copy; 2025 yBernard - Professional Animator | Game Animation Specialist</p>
         <p>Based in GMT-3 Timezone | Available for Freelance Projects</p>
     </footer>
 
