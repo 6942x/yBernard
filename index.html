@@ -426,9 +426,8 @@
         }
 
         .projects-container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
+            column-count: 3;
+            column-gap: 1.5rem;
         }
 
         .project-box {
@@ -440,9 +439,12 @@
             opacity: 0;
             transform: translateY(30px);
             position: relative;
-            display: flex;
-            flex-direction: column;
-            height: 250px;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            break-inside: avoid;
+            page-break-inside: avoid;
+            min-height: 250px;
         }
 
         .project-box::after {
@@ -496,11 +498,8 @@
             height: 100%;
             background: #000;
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
             overflow: hidden;
-            flex: 1;
         }
 
         .project-media img {
@@ -509,6 +508,7 @@
             object-fit: cover;
             cursor: pointer;
             transition: transform 0.5s;
+            min-height: 250px;
         }
 
         .project-media img:hover {
@@ -816,21 +816,6 @@
             transform: rotate(90deg) scale(1.05);
         }
 
-        .rig-type {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            color: #00FF88;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 5;
-            border: 1px solid #00FF88;
-            backdrop-filter: blur(5px);
-        }
-
         @media (min-width: 768px) {
             header {
                 padding: 1.5rem 5%;
@@ -899,12 +884,16 @@
             }
             
             .projects-container {
-                grid-template-columns: repeat(4, 1fr);
-                gap: 2rem;
+                column-count: 3;
+                column-gap: 2rem;
             }
             
             .project-box {
-                height: 300px;
+                min-height: 300px;
+            }
+            
+            .project-media img {
+                min-height: 300px;
             }
             
             .pricing-container {
@@ -954,13 +943,21 @@
 
         @media (max-width: 1200px) {
             .projects-container {
-                grid-template-columns: repeat(3, 1fr);
+                column-count: 2;
             }
         }
 
         @media (max-width: 992px) {
             .projects-container {
-                grid-template-columns: repeat(2, 1fr);
+                column-count: 2;
+            }
+            
+            .project-box {
+                min-height: 250px;
+            }
+            
+            .project-media img {
+                min-height: 250px;
             }
         }
 
@@ -1003,12 +1000,20 @@
             }
             
             .projects-container {
-                grid-template-columns: 1fr;
+                column-count: 1;
+            }
+            
+            .project-box {
+                min-height: 200px;
+            }
+            
+            .project-media img {
+                min-height: 200px;
             }
             
             .modal-video-container {
-                width: 75%;
-                height: 75%;
+                width: 90%;
+                height: 60%;
             }
             
             .project-title {
@@ -1056,7 +1061,11 @@
             }
             
             .project-box {
-                height: 200px;
+                min-height: 180px;
+            }
+            
+            .project-media img {
+                min-height: 180px;
             }
             
             .pricing-container {
@@ -1095,8 +1104,8 @@
             }
             
             .modal-video-container {
-                width: 75%;
-                height: 75%;
+                width: 90%;
+                height: 50%;
             }
             
             .close-button {
@@ -1168,37 +1177,37 @@
         <h2>Past <span>Work</span></h2>
         <div class="projects-container">
             <div class="project-box">
+                <div class="project-title">Blender Animation</div>
                 <div class="project-media">
-                    <img src="https://drive.google.com/thumbnail?id=1C4Ob5flV-GwZoBSWrB7xdNWL_gz0Hg4Q&sz=w1000" alt="Animation Project" class="project-img" onclick="openModal('https://player.vimeo.com/video/1134464470')">
-                    <div class="rig-type">R6</div>
+                    <img src="https://i.postimg.cc/MpHScTYj/Blender.png" alt="Blender Animation" onclick="openModal('https://player.vimeo.com/video/1135914534')">
                 </div>
             </div>
 
             <div class="project-box">
+                <div class="project-title">Blender Animation</div>
                 <div class="project-media">
-                    <img src="https://drive.google.com/thumbnail?id=1C4Ob5flV-GwZoBSWrB7xdNWL_gz0Hg4Q&sz=w1000" alt="Animation Project" class="project-img" onclick="openModal('https://player.vimeo.com/video/1134464470')">
-                    <div class="rig-type">R15</div>
+                    <img src="https://i.postimg.cc/MpHScTYj/Blender.png" alt="Blender Animation" onclick="openModal('https://player.vimeo.com/video/1134464470')">
                 </div>
             </div>
 
             <div class="project-box">
+                <div class="project-title">Blender Animation</div>
                 <div class="project-media">
-                    <img src="https://drive.google.com/thumbnail?id=1C4Ob5flV-GwZoBSWrB7xdNWL_gz0Hg4Q&sz=w1000" alt="Animation Project" class="project-img" onclick="openModal('https://player.vimeo.com/video/1134464470')">
-                    <div class="rig-type">Custom Rig</div>
+                    <img src="https://i.postimg.cc/MpHScTYj/Blender.png" alt="Blender Animation" onclick="openModal('https://player.vimeo.com/video/1134252342')">
                 </div>
             </div>
 
             <div class="project-box">
+                <div class="project-title">Moon Animator Animation</div>
                 <div class="project-media">
-                    <img src="https://drive.google.com/thumbnail?id=1C4Ob5flV-GwZoBSWrB7xdNWL_gz0Hg4Q&sz=w1000" alt="Animation Project" class="project-img" onclick="openModal('https://player.vimeo.com/video/1134464470')">
-                    <div class="rig-type">R6</div>
+                    <img src="https://i.postimg.cc/N0rv4zSh/Moon-Animator.png" alt="Moon Animator Animation" onclick="openModal('https://player.vimeo.com/video/1135915622')">
                 </div>
             </div>
 
             <div class="project-box">
+                <div class="project-title">Moon Animator Animation</div>
                 <div class="project-media">
-                    <img src="https://drive.google.com/thumbnail?id=1C4Ob5flV-GwZoBSWrB7xdNWL_gz0Hg4Q&sz=w1000" alt="Animation Project" class="project-img" onclick="openModal('https://player.vimeo.com/video/1134464470')">
-                    <div class="rig-type">R15</div>
+                    <img src="https://i.postimg.cc/N0rv4zSh/Moon-Animator.png" alt="Moon Animator Animation" onclick="openModal('https://player.vimeo.com/video/1135919570')">
                 </div>
             </div>
         </div>
